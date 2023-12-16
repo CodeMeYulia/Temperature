@@ -1,12 +1,8 @@
 let numbers = [];
 
-
     addNumbers();
-    console.log(numbers);
     delMinus();
-    console.log(numbers);
     square();
-    console.log(numbers);
     sort();
 
 
@@ -17,11 +13,9 @@ function addNumbers() {
 }
 
 function delMinus() {
-    item = numbers[0];
-    while (item < 0){
-        numbers.shift(item);
-        item++;
-}
+    numbers = numbers.filter(function(num) {
+        return num > 0;
+    });
 }
 
 function square() {
